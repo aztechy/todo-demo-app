@@ -7,6 +7,29 @@
     <script src="/js/todo.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body ng-app ng-controller="TodoCtrl">
-    Hello {{ name }}
+    <h1>TODO - Demo app</h1>
+
+    <hr />
+    
+    <div>My todo list:</div>
+    
+    <!-- Setup a simple form to allow us to add items to our todo list. -->
+    <form ng-submit="add()">
+      <div>
+        <!-- 
+          Our input utilizes two binding to provide us an object with a text attribute to reference within our
+          controller and aid in building new todo items.   
+        -->
+        <span><input type="text" ng-model="todo.text" placeholder="Enter something todo..." /></span>
+        <span><button type="submit">Add</button></span>
+      </div>
+    </form>
+    <!-- Utilize angular ng-repeat to iterate over our container and use the defined template to display our repeated items. -->
+    <div ng-repeat="todo in todoList">
+      <!-- Here we have a todo object and we've bound the checked state of the checkbox to its isCompleted attribute -->
+      <span><input type="checkbox" ng-model="todo.isCompleted"></span>
+      <!-- Here we say that we want to echo out whatever the expression returns. -->
+      <span>{{ todo.text }}</span>
+    </div>
   </body>
 </html>
