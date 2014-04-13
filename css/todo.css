@@ -1,0 +1,10 @@
+.completed {
+  text-decoration: line-through;
+}
+
+.actionLink {
+  text-decoration: underline;
+}
+.actionLink:hover {
+  cursor: pointer;
+}

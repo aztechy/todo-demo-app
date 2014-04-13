@@ -5,6 +5,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js" type="text/javascript" charset="utf-8"></script>
     <!-- Include our controller code. -->
     <script src="/js/todo.js" type="text/javascript" charset="utf-8"></script>
+    
+    <link rel="stylesheet" href="/css/todo.css" type="text/css" media="screen" title="no title" charset="utf-8">
   </head>
   <body ng-app ng-controller="TodoCtrl">
     <h1>TODO - Demo app</h1>
@@ -28,8 +30,13 @@
     <div ng-repeat="todo in todoList">
       <!-- Here we have a todo object and we've bound the checked state of the checkbox to its isCompleted attribute -->
       <span><input type="checkbox" ng-model="todo.isCompleted"></span>
-      <!-- Here we say that we want to echo out whatever the expression returns. -->
-      <span>{{ todo.text }}</span>
+      <!-- We now utilize the ng-class directive to aid in dynamically assigning classes -->
+      <span ng-class="{completed: todo.isCompleted}">{{ todo.text }}</span>
+    </div>
+    
+    <!-- Utilize ng-show to illustrate how to toggle visibility of items with angular paradigm -->
+    <div ng-show="todoList.length">
+      <span class="actionLink" ng-click="deleteCompleted()">Clear Completed Items</span>
     </div>
   </body>
 </html>
