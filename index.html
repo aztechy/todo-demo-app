@@ -1,8 +1,12 @@
 <!doctype html>
 <html>
   <head>
+    <!-- Include angular to get the ball rolling -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- Include our controller code. -->
+    <script src="/js/todo.js" type="text/javascript" charset="utf-8"></script>
   </head>
-  <body>
-    
+  <body ng-app ng-controller="TodoCtrl">
+    Hello {{ name }}
   </body>
 </html>
