@@ -16,3 +16,4 @@ Will provide you the code bundled for that particular tag.
 * v0.2 - Code here demonstrates the two-way binding provided to us by angular to hook up our standard 'Hello World' programs.
 * v0.3 - Demonstrate how to integrate functions and dig into actually creating our todo app.
 * v0.4 - Building on top of the existing application by allowing our users to remove any completed items.
+* v0.4.1 - Unit tests included into app.
