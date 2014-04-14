@@ -17,6 +17,7 @@
     
     <!-- Setup a simple form to allow us to add items to our todo list. -->
     <form ng-submit="add()">
+      <div>{{ todoError }}</div>
       <div>
         <!-- 
           Our input utilizes two binding to provide us an object with a text attribute to reference within our
