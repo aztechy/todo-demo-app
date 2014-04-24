@@ -34,7 +34,7 @@ For apache setup I modify my httpd.conf to contain the following:
 ---
 
 Listen 127.0.0.1:3000
-
+```
 <VirtualHost 127.0.0.1:3000>
   DocumentRoot "/path/to/app/dir/on/system"
   DirectoryIndex index.html
@@ -43,6 +43,7 @@ Listen 127.0.0.1:3000
     Allow from All
   </Directory>
 </VirtualHost>
+```
 
 ---
 
