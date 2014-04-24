@@ -17,3 +17,38 @@ Will provide you the code bundled for that particular tag.
 * v0.3 - Demonstrate how to integrate functions and dig into actually creating our todo app.
 * v0.4 - Building on top of the existing application by allowing our users to remove any completed items.
 * v0.4.1 - Unit tests included into app.
+
+---
+
+### Getting the App to Run
+
+If using node:
+
+* Run: npm install
+* Run: node server.js
+* Within the browser go to localhost:3000
+
+
+For apache setup I modify my httpd.conf to contain the following:
+
+---
+
+Listen 127.0.0.1:3000
+
+<VirtualHost 127.0.0.1:3000>
+  DocumentRoot "/path/to/app/dir/on/system"
+  DirectoryIndex index.html
+  <Directory "/path/to/app/dir/on/system">
+    AllowOverride All
+    Allow from All
+  </Directory>
+</VirtualHost>
+
+---
+
+Save the file and restart the apache server.
+
+### Running tests
+
+* I suggest having karma-cli installed globally: npm install -g karma-cli
+* Run: karma start tests/karma.conf.js
